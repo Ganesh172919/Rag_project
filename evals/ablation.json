@@ -1,0 +1,32 @@
+{
+  "full": {
+    "confidence": 0.3125,
+    "latency": 0.124,
+    "strategy": "no_retrieval",
+    "answer_len": 62
+  },
+  "no_reflection": {
+    "confidence": 0.4167,
+    "latency": 0.088,
+    "strategy": "no_retrieval",
+    "answer_len": 62
+  },
+  "no_web_fallback": {
+    "confidence": 0.4125,
+    "latency": 0.126,
+    "strategy": "no_retrieval",
+    "answer_len": 66
+  },
+  "forced_single_step": {
+    "confidence": 0.4042,
+    "latency": 0.188,
+    "strategy": "single_step",
+    "answer_len": 62
+  },
+  "forced_multi_step": {
+    "confidence": 0.4042,
+    "latency": 0.17,
+    "strategy": "multi_step",
+    "answer_len": 62
+  }
+}

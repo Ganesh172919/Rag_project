@@ -1,0 +1,1089 @@
+2026-07-11 13:59:54 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 13:59:54 | aarag.pipeline | INFO     |   AARAG INITIALIZATION
+2026-07-11 13:59:54 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 13:59:54 | aarag.pipeline | INFO     | Loading configuration...
+2026-07-11 13:59:54 | aarag.pipeline | DEBUG    | Loading config from config/default.yaml
+2026-07-11 13:59:54 | aarag.pipeline | INFO     | Configuration loaded: 10 top-level keys
+2026-07-11 13:59:54 | aarag.pipeline | INFO     |   LLM: meta-llama/Llama-3.1-8B-Instruct
+2026-07-11 13:59:54 | aarag.pipeline | INFO     |   Vector store: faiss
+2026-07-11 13:59:54 | aarag.pipeline | INFO     |   Embedding: BAAI/bge-large-en-v1.5
+2026-07-11 13:59:54 | aarag.pipeline | INFO     | AARAG initialized successfully ✓
+2026-07-11 13:59:54 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 13:59:54 | aarag.pipeline | INFO     |   QUERY: What is machine learning?
+2026-07-11 13:59:54 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 13:59:54 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 13:59:54 | aarag.pipeline | DEBUG    | Lazy-loading AdaptiveRouter...
+2026-07-11 14:00:03 | aarag.pipeline | DEBUG    | AdaptiveRouter loaded ✓
+2026-07-11 14:00:03 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:00:03 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:00:03 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 8.841s[/bold green]
+2026-07-11 14:00:03 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:00:03 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:00:03 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.012s[/bold green]
+2026-07-11 14:00:03 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:00:03 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:00:03 | aarag.pipeline | DEBUG    | Lazy-loading CorrectiveRetrieval...
+2026-07-11 14:00:03 | aarag.pipeline | DEBUG    | CorrectiveRetrieval loaded ✓
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:00:06 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 2.458s[/bold green]
+2026-07-11 14:00:06 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | Lazy-loading AgenticOrchestrator...
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | Lazy-loading VectorStore...
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | VectorStore loaded ✓
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | Lazy-loading KnowledgeGraphSearch...
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | KnowledgeGraphSearch loaded ✓
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | Lazy-loading WebSearch...
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | WebSearch loaded ✓
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | Lazy-loading SelfReflectionEngine...
+2026-07-11 14:00:06 | aarag.pipeline | INFO     | Loading LLM: meta-llama/Llama-3.1-8B-Instruct
+2026-07-11 14:00:06 | aarag.pipeline | WARNING  | Could not load LLM meta-llama/Llama-3.1-8B-Instruct: No module named 'transformers'
+2026-07-11 14:00:06 | aarag.pipeline | INFO     | Using fallback LLM function (no model loaded)
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | SelfReflectionEngine loaded ✓
+2026-07-11 14:00:06 | aarag.pipeline | DEBUG    | AgenticOrchestrator loaded ✓
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:00:06 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.113s[/bold green]
+2026-07-11 14:00:06 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:00:06 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.049s[/bold green]
+2026-07-11 14:00:06 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:00:06 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Answer: Based on the available information:  What is machine learning?
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3125
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   → Total Latency: 11.5070
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:00:06 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:07 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:07 | aarag.pipeline | INFO     |   AARAG INITIALIZATION
+2026-07-11 14:03:07 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:07 | aarag.pipeline | INFO     | Loading configuration...
+2026-07-11 14:03:07 | aarag.pipeline | DEBUG    | Loading config from config/default.yaml
+2026-07-11 14:03:07 | aarag.pipeline | INFO     | Configuration loaded: 10 top-level keys
+2026-07-11 14:03:07 | aarag.pipeline | INFO     |   LLM: meta-llama/Llama-3.1-8B-Instruct
+2026-07-11 14:03:07 | aarag.pipeline | INFO     |   Vector store: faiss
+2026-07-11 14:03:07 | aarag.pipeline | INFO     |   Embedding: BAAI/bge-large-en-v1.5
+2026-07-11 14:03:07 | aarag.pipeline | INFO     | AARAG initialized successfully ✓
+2026-07-11 14:03:07 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:07 | aarag.pipeline | INFO     |   QUERY: What is 2+2?
+2026-07-11 14:03:07 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:07 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:07 | aarag.pipeline | DEBUG    | Lazy-loading AdaptiveRouter...
+2026-07-11 14:03:20 | aarag.pipeline | DEBUG    | AdaptiveRouter loaded ✓
+2026-07-11 14:03:20 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:20 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:03:20 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 13.024s[/bold green]
+2026-07-11 14:03:20 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:20 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:03:20 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.015s[/bold green]
+2026-07-11 14:03:20 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:20 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:20 | aarag.pipeline | DEBUG    | Lazy-loading CorrectiveRetrieval...
+2026-07-11 14:03:20 | aarag.pipeline | DEBUG    | CorrectiveRetrieval loaded ✓
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 2.015s[/bold green]
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | Lazy-loading AgenticOrchestrator...
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | Lazy-loading VectorStore...
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | VectorStore loaded ✓
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | Lazy-loading KnowledgeGraphSearch...
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | KnowledgeGraphSearch loaded ✓
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | Lazy-loading WebSearch...
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | WebSearch loaded ✓
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | Lazy-loading SelfReflectionEngine...
+2026-07-11 14:03:22 | aarag.pipeline | INFO     | Loading LLM: meta-llama/Llama-3.1-8B-Instruct
+2026-07-11 14:03:22 | aarag.pipeline | WARNING  | Could not load LLM meta-llama/Llama-3.1-8B-Instruct: No module named 'transformers'
+2026-07-11 14:03:22 | aarag.pipeline | INFO     | Using fallback LLM function (no model loaded)
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | SelfReflectionEngine loaded ✓
+2026-07-11 14:03:22 | aarag.pipeline | DEBUG    | AgenticOrchestrator loaded ✓
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.143s[/bold green]
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.060s[/bold green]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:22 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Answer: Based on the available information:  what is 2+2=explain - Brainly.in.
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3125
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Total Latency: 15.3055
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:22 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   QUERY: Hello, how are you?
+2026-07-11 14:03:22 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.55)
+2026-07-11 14:03:22 | aarag.pipeline | WARNING  |   ⚠ Low confidence — fallback strategy used
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.022s[/bold green]
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.021s[/bold green]
+2026-07-11 14:03:22 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:22 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:23 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.057s[/bold green]
+2026-07-11 14:03:23 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:23 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:23 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:24 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:24 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.094s[/bold green]
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.047s[/bold green]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:24 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   Answer: Based on the available information:  | Kids Greeting Song and Feelings Song | Super Simple Songs.
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3292
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   → Total Latency: 1.2756
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:24 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   QUERY: Thank you!
+2026-07-11 14:03:24 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.55)
+2026-07-11 14:03:24 | aarag.pipeline | WARNING  |   ⚠ Low confidence — fallback strategy used
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.023s[/bold green]
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.015s[/bold green]
+2026-07-11 14:03:24 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:24 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.309s[/bold green]
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.104s[/bold green]
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.044s[/bold green]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:25 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Answer: Based on the available information:  110 Best Thank You Messages to Express Your Gratitude.
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3292
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Total Latency: 1.5285
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:25 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   QUERY: What color is the sky?
+2026-07-11 14:03:25 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.55)
+2026-07-11 14:03:25 | aarag.pipeline | WARNING  |   ⚠ Low confidence — fallback strategy used
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.023s[/bold green]
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.018s[/bold green]
+2026-07-11 14:03:25 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:25 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.341s[/bold green]
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.077s[/bold green]
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.038s[/bold green]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:27 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Answer: Based on the available information:  The Sky Isn't Blue: Here's What Color It Actually Is.
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3292
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Total Latency: 1.5227
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:27 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   QUERY: What is machine learning?
+2026-07-11 14:03:27 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.011s[/bold green]
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.006s[/bold green]
+2026-07-11 14:03:27 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:27 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:28 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.513s[/bold green]
+2026-07-11 14:03:28 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:03:28 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.023s[/bold green]
+2026-07-11 14:03:28 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:28 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.033s[/bold green]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:28 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Answer: Based on the available information:  What is machine learning?
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3125
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Total Latency: 1.6175
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:28 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   QUERY: Who invented the telephone?
+2026-07-11 14:03:28 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:28 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:28 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.55)
+2026-07-11 14:03:28 | aarag.pipeline | WARNING  |   ⚠ Low confidence — fallback strategy used
+2026-07-11 14:03:28 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.024s[/bold green]
+2026-07-11 14:03:29 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:29 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:29 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:29 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.015s[/bold green]
+2026-07-11 14:03:29 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:29 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.195s[/bold green]
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.110s[/bold green]
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.041s[/bold green]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:30 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Answer: Based on the available information:  Alexander Graham Bell - Wikipedia.
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3292
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Total Latency: 1.4182
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:30 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   QUERY: What is the capital of France?
+2026-07-11 14:03:30 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.014s[/bold green]
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.007s[/bold green]
+2026-07-11 14:03:30 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:30 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.281s[/bold green]
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.025s[/bold green]
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.041s[/bold green]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:31 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Answer: Based on the available information:  Paris - Wikipedia.
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3125
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Total Latency: 1.4011
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:31 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   QUERY: What is Python programming language?
+2026-07-11 14:03:31 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.018s[/bold green]
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.010s[/bold green]
+2026-07-11 14:03:31 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:31 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.212s[/bold green]
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.024s[/bold green]
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.032s[/bold green]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:33 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Answer: Based on the available information:  Python (programming language) - Wikipedia.
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3125
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Total Latency: 1.3232
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:33 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   QUERY: Compare supervised and unsupervised learning approaches in modern ML.
+2026-07-11 14:03:33 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.75)
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.013s[/bold green]
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.017s[/bold green]
+2026-07-11 14:03:33 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:33 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.308s[/bold green]
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.077s[/bold green]
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.038s[/bold green]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:34 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Answer: Based on the available information:  Difference between Supervised and Unsupervised Learning.
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3792
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Total Latency: 1.4719
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:34 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   QUERY: How does the transformer architecture differ from RNNs in NLP?
+2026-07-11 14:03:34 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.65)
+2026-07-11 14:03:34 | aarag.pipeline | WARNING  |   ⚠ Low confidence — fallback strategy used
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.018s[/bold green]
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.013s[/bold green]
+2026-07-11 14:03:34 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:34 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.224s[/bold green]
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.184s[/bold green]
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.031s[/bold green]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:36 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Answer: Based on the available information:  Why Transformer Models Replaced RNN in NLP - ML Journey.
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3542
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Total Latency: 1.4979
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:36 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   QUERY: Explain the relationship between gradient descent and backpropagation.
+2026-07-11 14:03:36 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.75)
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.012s[/bold green]
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.016s[/bold green]
+2026-07-11 14:03:36 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:36 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.328s[/bold green]
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.078s[/bold green]
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.041s[/bold green]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:37 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Answer: Based on the available information:  How Does Gradient Descent and Backpropagation Work Together?.
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3792
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Total Latency: 1.4871
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:37 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   QUERY: What are the differences between FAISS and ChromaDB vector stores?
+2026-07-11 14:03:37 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.75)
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.019s[/bold green]
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.016s[/bold green]
+2026-07-11 14:03:37 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:37 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.309s[/bold green]
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.076s[/bold green]
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.035s[/bold green]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:39 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Answer: Based on the available information:  Faiss Vector Database vs ChromaDB: Comparison for Modern AI ......
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3792
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Total Latency: 1.4809
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:39 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   QUERY: What are all the major breakthroughs in AI from 2017 to 2025?
+2026-07-11 14:03:39 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.65)
+2026-07-11 14:03:39 | aarag.pipeline | WARNING  |   ⚠ Low confidence — fallback strategy used
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.020s[/bold green]
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.016s[/bold green]
+2026-07-11 14:03:39 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:39 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.314s[/bold green]
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.088s[/bold green]
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.041s[/bold green]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:40 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Answer: Based on the available information:  AI Breakthrough Timeline: Key Milestones from 1997 to 2026 | AI...
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3542
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Total Latency: 1.5057
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:40 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   QUERY: Summarize the entire field of retrieval-augmented generation.
+2026-07-11 14:03:40 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Complexity Level: 3 (Graph-Global)
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   → Strategy: graph_global (confidence: 0.80)
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.015s[/bold green]
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.011s[/bold green]
+2026-07-11 14:03:40 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:40 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.242s[/bold green]
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Strategy: graph_global
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Tools used: graph_query
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 1: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 2: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 3: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 4: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 5: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 6: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 7: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 8: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 9: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | DEBUG    |     Step 10: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.075s[/bold green]
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.032s[/bold green]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:42 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Answer: Based on the available information:  Retrieval-augmented generation - Wikipedia.
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3917
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Total Latency: 1.3889
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Strategy: graph_global
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:42 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   QUERY: How do all the components of a modern RAG pipeline work together?
+2026-07-11 14:03:42 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Complexity Level: 2 (Multi-Step)
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.65)
+2026-07-11 14:03:42 | aarag.pipeline | WARNING  |   ⚠ Low confidence — fallback strategy used
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.015s[/bold green]
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.012s[/bold green]
+2026-07-11 14:03:42 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:42 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.188s[/bold green]
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.087s[/bold green]
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.031s[/bold green]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:43 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Answer: Based on the available information:  RAG Pipeline Diagram: A Beginner's Guide to Understanding ...
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3542
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Total Latency: 1.3571
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:43 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   QUERY: Give a comprehensive overview of knowledge graph construction methods.
+2026-07-11 14:03:43 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Complexity Level: 3 (Graph-Global)
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   → Strategy: graph_global (confidence: 0.80)
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.016s[/bold green]
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.014s[/bold green]
+2026-07-11 14:03:43 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:43 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 1.223s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: graph_global
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Tools used: graph_query
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 1: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 2: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 3: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 4: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 5: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 6: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 7: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 8: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 9: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 10: [graph_query] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.074s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.039s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Answer: Based on the available information:  A systematic literature review of knowledge graph construction ...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3917
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Total Latency: 1.3957
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: graph_global
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   QUERY: What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.012s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.009s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 0.021s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.022s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.030s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Answer: Based on the available information:  What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Overall Confidence: 0.3125
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Total Latency: 0.1236
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   QUERY: What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.011s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.007s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 0.023s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.022s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Self-reflection disabled
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.007s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Answer: Based on the available information:  What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Overall Confidence: 0.4167
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Total Latency: 0.0881
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   QUERY: What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Strategy: no_retrieval (confidence: 0.85)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.014s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Skipping retrieval (no_retrieval strategy)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.009s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.00)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: 
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 0.017s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Steps taken: 1
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Tools used: 
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.30)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.023s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Relevance]: [Relevant]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Support]: [Fully Supported]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Using revised answer (higher confidence)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.50)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.037s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Answer: I don't have specific context to answer: What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Overall Confidence: 0.4125
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Total Latency: 0.1259
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: no_retrieval
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: 0
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   QUERY: What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Strategy: single_step (confidence: 0.85)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.020s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.018s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 0.019s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: single_step
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.076s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.040s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Answer: Based on the available information:  What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Overall Confidence: 0.4042
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Total Latency: 0.1881
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: single_step
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: 1
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   QUERY: What is machine learning?
+2026-07-11 14:03:45 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 2: Adaptive Router[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Complexity Level: 0 (No Retrieval)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Strategy: multi_step (confidence: 0.85)
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 2: Adaptive Router completed in 0.013s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 1: Knowledge Sources[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Searching vector store (top_k=5)...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Retrieved 0 documents
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 1: Knowledge Sources completed in 0.006s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 3: Corrective Retrieval[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Evaluating retrieval quality...
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Action: ✗ INCORRECT (confidence: 0.10)
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Web search fallback triggered
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Sources: web_search
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 3: Corrective Retrieval completed in 0.028s[/bold green]
+2026-07-11 14:03:45 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 5: Agentic Orchestrator[/bold blue]
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Planning: react
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Steps taken: 10
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   Tools used: retrieve
+2026-07-11 14:03:45 | aarag.pipeline | INFO     |   → Agent Confidence:  (confidence: 0.67)
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 1: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 2: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 3: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 4: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 5: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 6: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 7: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 8: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 9: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | DEBUG    |     Step 10: [retrieve] I need more information to answer this question....
+2026-07-11 14:03:46 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 5: Agentic Orchestrator completed in 0.069s[/bold green]
+2026-07-11 14:03:46 | aarag.pipeline | PIPELINE | [bold blue]▸ LAYER 4: Self-Reflection[/bold blue]
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   Generating reflection tokens...
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   [Retrieve]: [No Retrieve]
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   [Relevance]: [Irrelevant]
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   [Support]: [No Support]
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   [Utility]: [Not Useful]
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   → Answer revised 2 time(s)
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   → Reflection Confidence:  (confidence: 0.00)
+2026-07-11 14:03:46 | aarag.pipeline | PIPELINE | [bold green]✓ LAYER 4: Self-Reflection completed in 0.036s[/bold green]
+2026-07-11 14:03:46 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   RESPONSE SUMMARY
+2026-07-11 14:03:46 | aarag.pipeline | INFO     | ────────────────────────────────────────────────────────────
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   Answer: Based on the available information:  What is machine learning?
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   → Overall Confidence: 0.4042
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   → Total Latency: 0.1695
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   Strategy: multi_step
+2026-07-11 14:03:46 | aarag.pipeline | INFO     |   Sources: 1

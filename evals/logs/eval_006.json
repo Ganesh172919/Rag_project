@@ -1,0 +1,44 @@
+{
+  "query_id": "eval_006",
+  "query": "Who invented the telephone?",
+  "answer": "Based on the available information:  Alexander Graham Bell - Wikipedia.",
+  "strategy_used": "multi_step",
+  "confidence": 0.3292,
+  "latency": 1.467,
+  "sources": [
+    "web_search"
+  ],
+  "routing": {
+    "level": 2,
+    "strategy": "multi_step",
+    "confidence": 0.55,
+    "fallback_used": true
+  },
+  "corrective": {
+    "action": "INCORRECT",
+    "confidence": 0.1,
+    "web_used": true,
+    "sources": [
+      "web_search"
+    ]
+  },
+  "reflection": {
+    "retrieve": "[No Retrieve]",
+    "relevance": "[Irrelevant]",
+    "support": "[No Support]",
+    "utility": "[Not Useful]",
+    "revised": true,
+    "revision_count": 2,
+    "final_confidence": 0.0
+  },
+  "agent": {
+    "tools_used": [
+      "retrieve"
+    ],
+    "total_steps": 10,
+    "strategy_used": "multi_step",
+    "confidence": 0.6666666666666666
+  },
+  "status": "success",
+  "expected_complexity": "single_step"
+}

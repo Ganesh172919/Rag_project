@@ -1,0 +1,792 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-11T14:03:46.125038",
+    "total_queries": 16,
+    "eval_time_seconds": 37.8
+  },
+  "metrics": {
+    "total": 16,
+    "successful": 16,
+    "errors": 0,
+    "avg_confidence": 0.3469,
+    "min_confidence": 0.3125,
+    "max_confidence": 0.3917,
+    "avg_latency": 2.363,
+    "min_latency": 1.338,
+    "max_latency": 15.377,
+    "total_latency": 37.801,
+    "complexity_breakdown": {
+      "no_retrieval": {
+        "count": 4,
+        "avg_confidence": 0.325,
+        "avg_latency": 4.968,
+        "strategy_distribution": {
+          "no_retrieval": 1,
+          "multi_step": 3
+        }
+      },
+      "single_step": {
+        "count": 4,
+        "avg_confidence": 0.3167,
+        "avg_latency": 1.488,
+        "strategy_distribution": {
+          "no_retrieval": 3,
+          "multi_step": 1
+        }
+      },
+      "multi_step": {
+        "count": 4,
+        "avg_confidence": 0.373,
+        "avg_latency": 1.532,
+        "strategy_distribution": {
+          "multi_step": 4
+        }
+      },
+      "graph_global": {
+        "count": 4,
+        "avg_confidence": 0.373,
+        "avg_latency": 1.461,
+        "strategy_distribution": {
+          "multi_step": 2,
+          "graph_global": 2
+        }
+      }
+    },
+    "layer_averages": {
+      "router": 0.7125,
+      "crag": 0.1,
+      "reflection": 0.0,
+      "agent": 0.575
+    }
+  },
+  "ablation": {
+    "full": {
+      "confidence": 0.3125,
+      "latency": 0.124,
+      "strategy": "no_retrieval",
+      "answer_len": 62
+    },
+    "no_reflection": {
+      "confidence": 0.4167,
+      "latency": 0.088,
+      "strategy": "no_retrieval",
+      "answer_len": 62
+    },
+    "no_web_fallback": {
+      "confidence": 0.4125,
+      "latency": 0.126,
+      "strategy": "no_retrieval",
+      "answer_len": 66
+    },
+    "forced_single_step": {
+      "confidence": 0.4042,
+      "latency": 0.188,
+      "strategy": "single_step",
+      "answer_len": 62
+    },
+    "forced_multi_step": {
+      "confidence": 0.4042,
+      "latency": 0.17,
+      "strategy": "multi_step",
+      "answer_len": 62
+    }
+  },
+  "results": [
+    {
+      "query_id": "eval_001",
+      "query": "What is 2+2?",
+      "answer": "Based on the available information:  what is 2+2=explain - Brainly.in.",
+      "strategy_used": "no_retrieval",
+      "confidence": 0.3125,
+      "latency": 15.377,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 0,
+        "strategy": "no_retrieval",
+        "confidence": 0.85,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [],
+        "total_steps": 1,
+        "strategy_used": "no_retrieval",
+        "confidence": 0.3
+      },
+      "status": "success",
+      "expected_complexity": "no_retrieval"
+    },
+    {
+      "query_id": "eval_002",
+      "query": "Hello, how are you?",
+      "answer": "Based on the available information:  | Kids Greeting Song and Feelings Song | Super Simple Songs.",
+      "strategy_used": "multi_step",
+      "confidence": 0.3292,
+      "latency": 1.338,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.55,
+        "fallback_used": true
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "no_retrieval"
+    },
+    {
+      "query_id": "eval_003",
+      "query": "Thank you!",
+      "answer": "Based on the available information:  110 Best Thank You Messages to Express Your Gratitude.",
+      "strategy_used": "multi_step",
+      "confidence": 0.3292,
+      "latency": 1.589,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.55,
+        "fallback_used": true
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "no_retrieval"
+    },
+    {
+      "query_id": "eval_004",
+      "query": "What color is the sky?",
+      "answer": "Based on the available information:  The Sky Isn't Blue: Here's What Color It Actually Is.",
+      "strategy_used": "multi_step",
+      "confidence": 0.3292,
+      "latency": 1.569,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.55,
+        "fallback_used": true
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "no_retrieval"
+    },
+    {
+      "query_id": "eval_005",
+      "query": "What is machine learning?",
+      "answer": "Based on the available information:  What is machine learning?",
+      "strategy_used": "no_retrieval",
+      "confidence": 0.3125,
+      "latency": 1.666,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 0,
+        "strategy": "no_retrieval",
+        "confidence": 0.85,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [],
+        "total_steps": 1,
+        "strategy_used": "no_retrieval",
+        "confidence": 0.3
+      },
+      "status": "success",
+      "expected_complexity": "single_step"
+    },
+    {
+      "query_id": "eval_006",
+      "query": "Who invented the telephone?",
+      "answer": "Based on the available information:  Alexander Graham Bell - Wikipedia.",
+      "strategy_used": "multi_step",
+      "confidence": 0.3292,
+      "latency": 1.467,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.55,
+        "fallback_used": true
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "single_step"
+    },
+    {
+      "query_id": "eval_007",
+      "query": "What is the capital of France?",
+      "answer": "Based on the available information:  Paris - Wikipedia.",
+      "strategy_used": "no_retrieval",
+      "confidence": 0.3125,
+      "latency": 1.452,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 0,
+        "strategy": "no_retrieval",
+        "confidence": 0.85,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [],
+        "total_steps": 1,
+        "strategy_used": "no_retrieval",
+        "confidence": 0.3
+      },
+      "status": "success",
+      "expected_complexity": "single_step"
+    },
+    {
+      "query_id": "eval_008",
+      "query": "What is Python programming language?",
+      "answer": "Based on the available information:  Python (programming language) - Wikipedia.",
+      "strategy_used": "no_retrieval",
+      "confidence": 0.3125,
+      "latency": 1.369,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 0,
+        "strategy": "no_retrieval",
+        "confidence": 0.85,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [],
+        "total_steps": 1,
+        "strategy_used": "no_retrieval",
+        "confidence": 0.3
+      },
+      "status": "success",
+      "expected_complexity": "single_step"
+    },
+    {
+      "query_id": "eval_009",
+      "query": "Compare supervised and unsupervised learning approaches in modern ML.",
+      "answer": "Based on the available information:  Difference between Supervised and Unsupervised Learning.",
+      "strategy_used": "multi_step",
+      "confidence": 0.3792,
+      "latency": 1.517,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.75,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "multi_step"
+    },
+    {
+      "query_id": "eval_010",
+      "query": "How does the transformer architecture differ from RNNs in NLP?",
+      "answer": "Based on the available information:  Why Transformer Models Replaced RNN in NLP - ML Journey.",
+      "strategy_used": "multi_step",
+      "confidence": 0.3542,
+      "latency": 1.544,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.65,
+        "fallback_used": true
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "multi_step"
+    },
+    {
+      "query_id": "eval_011",
+      "query": "Explain the relationship between gradient descent and backpropagation.",
+      "answer": "Based on the available information:  How Does Gradient Descent and Backpropagation Work Together?.",
+      "strategy_used": "multi_step",
+      "confidence": 0.3792,
+      "latency": 1.535,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.75,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "multi_step"
+    },
+    {
+      "query_id": "eval_012",
+      "query": "What are the differences between FAISS and ChromaDB vector stores?",
+      "answer": "Based on the available information:  Faiss Vector Database vs ChromaDB: Comparison for Modern AI ....",
+      "strategy_used": "multi_step",
+      "confidence": 0.3792,
+      "latency": 1.534,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.75,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "multi_step"
+    },
+    {
+      "query_id": "eval_013",
+      "query": "What are all the major breakthroughs in AI from 2017 to 2025?",
+      "answer": "Based on the available information:  AI Breakthrough Timeline: Key Milestones from 1997 to 2026 | AI Flash ....",
+      "strategy_used": "multi_step",
+      "confidence": 0.3542,
+      "latency": 1.562,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.65,
+        "fallback_used": true
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "graph_global"
+    },
+    {
+      "query_id": "eval_014",
+      "query": "Summarize the entire field of retrieval-augmented generation.",
+      "answer": "Based on the available information:  Retrieval-augmented generation - Wikipedia.",
+      "strategy_used": "graph_global",
+      "confidence": 0.3917,
+      "latency": 1.439,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 3,
+        "strategy": "graph_global",
+        "confidence": 0.8,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "graph_query"
+        ],
+        "total_steps": 10,
+        "strategy_used": "graph_global",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "graph_global"
+    },
+    {
+      "query_id": "eval_015",
+      "query": "How do all the components of a modern RAG pipeline work together?",
+      "answer": "Based on the available information:  RAG Pipeline Diagram: A Beginner's Guide to Understanding ...",
+      "strategy_used": "multi_step",
+      "confidence": 0.3542,
+      "latency": 1.399,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 2,
+        "strategy": "multi_step",
+        "confidence": 0.65,
+        "fallback_used": true
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "retrieve"
+        ],
+        "total_steps": 10,
+        "strategy_used": "multi_step",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "graph_global"
+    },
+    {
+      "query_id": "eval_016",
+      "query": "Give a comprehensive overview of knowledge graph construction methods.",
+      "answer": "Based on the available information:  A systematic literature review of knowledge graph construction and ....",
+      "strategy_used": "graph_global",
+      "confidence": 0.3917,
+      "latency": 1.444,
+      "sources": [
+        "web_search"
+      ],
+      "routing": {
+        "level": 3,
+        "strategy": "graph_global",
+        "confidence": 0.8,
+        "fallback_used": false
+      },
+      "corrective": {
+        "action": "INCORRECT",
+        "confidence": 0.1,
+        "web_used": true,
+        "sources": [
+          "web_search"
+        ]
+      },
+      "reflection": {
+        "retrieve": "[No Retrieve]",
+        "relevance": "[Irrelevant]",
+        "support": "[No Support]",
+        "utility": "[Not Useful]",
+        "revised": true,
+        "revision_count": 2,
+        "final_confidence": 0.0
+      },
+      "agent": {
+        "tools_used": [
+          "graph_query"
+        ],
+        "total_steps": 10,
+        "strategy_used": "graph_global",
+        "confidence": 0.6666666666666666
+      },
+      "status": "success",
+      "expected_complexity": "graph_global"
+    }
+  ]
+}

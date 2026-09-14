@@ -1,0 +1,44 @@
+{
+  "query_id": "eval_016",
+  "query": "Give a comprehensive overview of knowledge graph construction methods.",
+  "answer": "Based on the available information:  A systematic literature review of knowledge graph construction and ....",
+  "strategy_used": "graph_global",
+  "confidence": 0.3917,
+  "latency": 1.444,
+  "sources": [
+    "web_search"
+  ],
+  "routing": {
+    "level": 3,
+    "strategy": "graph_global",
+    "confidence": 0.8,
+    "fallback_used": false
+  },
+  "corrective": {
+    "action": "INCORRECT",
+    "confidence": 0.1,
+    "web_used": true,
+    "sources": [
+      "web_search"
+    ]
+  },
+  "reflection": {
+    "retrieve": "[No Retrieve]",
+    "relevance": "[Irrelevant]",
+    "support": "[No Support]",
+    "utility": "[Not Useful]",
+    "revised": true,
+    "revision_count": 2,
+    "final_confidence": 0.0
+  },
+  "agent": {
+    "tools_used": [
+      "graph_query"
+    ],
+    "total_steps": 10,
+    "strategy_used": "graph_global",
+    "confidence": 0.6666666666666666
+  },
+  "status": "success",
+  "expected_complexity": "graph_global"
+}

@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="aarag",
+    version="1.0.0",
+    description="Adaptive Agentic Retrieval-Augmented Generation",
+    author="M.Research Student",
+    python_requires=">=3.10",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    install_requires=[
+        "torch>=2.1.0",
+        "transformers>=4.36.0",
+        "peft>=0.7.0",
+        "accelerate>=0.25.0",
+        "faiss-cpu>=1.7.4",
+        "chromadb>=0.4.22",
+        "sentence-transformers>=2.3.0",
+        "networkx>=3.2.0",
+        "langchain>=0.1.0",
+        "langgraph>=0.0.20",
+        "ragas>=0.1.0",
+        "duckduckgo-search>=4.1.0",
+        "numpy>=1.26.0",
+        "pandas>=2.1.0",
+        "scikit-learn>=1.3.0",
+        "pyyaml>=6.0.1",
+        "tqdm>=4.66.0",
+        "rich>=13.7.0",
+    ],
+    extras_require={
+        "demo": ["streamlit>=1.30.0", "plotly>=5.18.0", "matplotlib>=3.8.0"],
+        "dev": ["pytest>=7.4.0", "pytest-asyncio>=0.23.0"],
+    },
+)

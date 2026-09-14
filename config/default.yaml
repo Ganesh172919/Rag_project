@@ -1,0 +1,161 @@
+# AARAG Default Configuration
+
+project:
+  name: "AARAG"
+  version: "1.1.0"
+  seed: 42
+  device: "auto"  # auto, cuda, cpu
+
+# LLM Configuration
+llm:
+  model_name: "meta-llama/Llama-3.1-8B-Instruct"
+  max_new_tokens: 1024
+  temperature: 0.1
+  top_p: 0.9
+  do_sample: true
+  load_in_4bit: true
+  lora_rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+
+# Layer 1: Knowledge Sources
+knowledge_sources:
+  vector_store:
+    backend: "faiss"  # faiss or chroma
+    embedding_model: "BAAI/bge-large-en-v1.5"
+    embedding_dim: 1024
+    chunk_size: 512
+    chunk_overlap: 50
+    top_k: 5
+    similarity_threshold: 0.5
+
+  knowledge_graph:
+    backend: "networkx"  # networkx or neo4j
+    entity_extraction_model: "meta-llama/Llama-3.1-8B-Instruct"
+    community_algorithm: "leiden"
+    max_hops: 3
+
+  web_search:
+    provider: "duckduckgo"  # duckduckgo, tavily, serpapi
+    max_results: 5
+    timeout: 10
+
+# Layer 2: Adaptive Router
+adaptive_router:
+  classifier_model: "microsoft/deberta-v3-base"
+  num_classes: 4
+  confidence_threshold: 0.7
+  max_length: 512
+  batch_size: 32
+
+# Layer 3: Corrective Retrieval
+corrective_retrieval:
+  evaluator_model: "microsoft/deberta-v3-small"
+  confidence_thresholds:
+    correct: 0.8
+    incorrect: 0.3
+  max_web_results: 5
+  decompose_strategy: "keypoint"  # keypoint, sentence, paragraph
+
+# Layer 4: Self-Reflection
+self_reflection:
+  enabled: true
+  max_retries: 2
+  reflection_tokens:
+    retrieve: true
+    relevance: true
+    support: true
+    utility: true
+
+# Layer 5: Agentic Orchestrator
+agentic_orchestrator:
+  max_steps: 10
+  planning_strategy: "react"  # react, plan_and_execute, tree_of_thought
+  tool_timeout: 30
+  max_tool_retries: 2
+
+# Evaluation
+evaluation:
+  datasets:
+    - "hotpotqa"
+    - "musique"
+    - "natural_questions"
+    - "triviaqa"
+    - "2wikimultihop"
+  metrics:
+    - "exact_match"
+    - "f1"
+    - "faithfulness"
+    - "answer_relevancy"
+    - "context_precision"
+    - "context_recall"
+    - "rouge_l"
+    - "bert_score"
+  batch_size: 16
+  max_samples: 1000
+
+# Training
+training:
+  router:
+    epochs: 10
+    learning_rate: 2e-5
+    batch_size: 32
+    warmup_ratio: 0.1
+    weight_decay: 0.01
+
+  evaluator:
+    epochs: 5
+    learning_rate: 3e-5
+    batch_size: 16
+    warmup_ratio: 0.1
+
+  reflection:
+    epochs: 3
+    learning_rate: 1e-5
+    batch_size: 4
+    gradient_accumulation_steps: 4
+
+# Demo
+demo:
+  title: "AARAG Demo"
+  port: 8501
+  show_reasoning_trace: true
+  show_comparison: true
+  max_comparison_baselines: 3
+
+# Layer: Cross-Encoder Reranker
+cross_encoder_reranker:
+  enabled: true
+  model_name: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  max_length: 512
+  batch_size: 32
+
+# Layer: Hybrid Retrieval
+hybrid_retrieval:
+  enabled: false
+  k: 60
+  alpha: 0.5  # Weight for dense (1-alpha for BM25)
+  bm25_k1: 1.5
+  bm25_b: 0.75
+
+# Layer: Query Cache
+query_cache:
+  enabled: true
+  max_size: 1000
+  ttl_seconds: 3600
+  similarity_threshold: 0.95
+
+# Layer: Confidence Calibration
+confidence_calibration:
+  enabled: false
+  method: "temperature"  # temperature or platt
+
+# Logging
+logging:
+  structured:
+    enabled: true
+    log_dir: "logs/"
+    json_output: true
+  tracing:
+    enabled: false
+    trace_dir: "logs/traces/"

@@ -1,0 +1,44 @@
+{
+  "query_id": "eval_013",
+  "query": "What are all the major breakthroughs in AI from 2017 to 2025?",
+  "answer": "Based on the available information:  AI Breakthrough Timeline: Key Milestones from 1997 to 2026 | AI Flash ....",
+  "strategy_used": "multi_step",
+  "confidence": 0.3542,
+  "latency": 1.562,
+  "sources": [
+    "web_search"
+  ],
+  "routing": {
+    "level": 2,
+    "strategy": "multi_step",
+    "confidence": 0.65,
+    "fallback_used": true
+  },
+  "corrective": {
+    "action": "INCORRECT",
+    "confidence": 0.1,
+    "web_used": true,
+    "sources": [
+      "web_search"
+    ]
+  },
+  "reflection": {
+    "retrieve": "[No Retrieve]",
+    "relevance": "[Irrelevant]",
+    "support": "[No Support]",
+    "utility": "[Not Useful]",
+    "revised": true,
+    "revision_count": 2,
+    "final_confidence": 0.0
+  },
+  "agent": {
+    "tools_used": [
+      "retrieve"
+    ],
+    "total_steps": 10,
+    "strategy_used": "multi_step",
+    "confidence": 0.6666666666666666
+  },
+  "status": "success",
+  "expected_complexity": "graph_global"
+}

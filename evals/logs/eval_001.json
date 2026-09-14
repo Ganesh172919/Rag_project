@@ -1,0 +1,42 @@
+{
+  "query_id": "eval_001",
+  "query": "What is 2+2?",
+  "answer": "Based on the available information:  what is 2+2=explain - Brainly.in.",
+  "strategy_used": "no_retrieval",
+  "confidence": 0.3125,
+  "latency": 15.377,
+  "sources": [
+    "web_search"
+  ],
+  "routing": {
+    "level": 0,
+    "strategy": "no_retrieval",
+    "confidence": 0.85,
+    "fallback_used": false
+  },
+  "corrective": {
+    "action": "INCORRECT",
+    "confidence": 0.1,
+    "web_used": true,
+    "sources": [
+      "web_search"
+    ]
+  },
+  "reflection": {
+    "retrieve": "[No Retrieve]",
+    "relevance": "[Irrelevant]",
+    "support": "[No Support]",
+    "utility": "[Not Useful]",
+    "revised": true,
+    "revision_count": 2,
+    "final_confidence": 0.0
+  },
+  "agent": {
+    "tools_used": [],
+    "total_steps": 1,
+    "strategy_used": "no_retrieval",
+    "confidence": 0.3
+  },
+  "status": "success",
+  "expected_complexity": "no_retrieval"
+}

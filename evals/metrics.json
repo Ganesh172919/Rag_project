@@ -1,0 +1,55 @@
+{
+  "total": 16,
+  "successful": 16,
+  "errors": 0,
+  "avg_confidence": 0.3469,
+  "min_confidence": 0.3125,
+  "max_confidence": 0.3917,
+  "avg_latency": 2.363,
+  "min_latency": 1.338,
+  "max_latency": 15.377,
+  "total_latency": 37.801,
+  "complexity_breakdown": {
+    "no_retrieval": {
+      "count": 4,
+      "avg_confidence": 0.325,
+      "avg_latency": 4.968,
+      "strategy_distribution": {
+        "no_retrieval": 1,
+        "multi_step": 3
+      }
+    },
+    "single_step": {
+      "count": 4,
+      "avg_confidence": 0.3167,
+      "avg_latency": 1.488,
+      "strategy_distribution": {
+        "no_retrieval": 3,
+        "multi_step": 1
+      }
+    },
+    "multi_step": {
+      "count": 4,
+      "avg_confidence": 0.373,
+      "avg_latency": 1.532,
+      "strategy_distribution": {
+        "multi_step": 4
+      }
+    },
+    "graph_global": {
+      "count": 4,
+      "avg_confidence": 0.373,
+      "avg_latency": 1.461,
+      "strategy_distribution": {
+        "multi_step": 2,
+        "graph_global": 2
+      }
+    }
+  },
+  "layer_averages": {
+    "router": 0.7125,
+    "crag": 0.1,
+    "reflection": 0.0,
+    "agent": 0.575
+  }
+}
